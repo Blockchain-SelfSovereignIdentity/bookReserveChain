@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+
+# Aumentar o timeout para o Docker
+export DOCKER_CLIENT_TIMEOUT=300
+export COMPOSE_HTTP_TIMEOUT=300
+
 ORG_QNTY=3
 DEPLOY_CCAAS=false
 CCAAS_TLS_ENABLEd=""

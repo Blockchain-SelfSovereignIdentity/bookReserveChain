@@ -25,3 +25,7 @@ then
 else
     cd ../ccapi; docker-compose down; docker-compose up -d --build; cd ..
 fi
+
+docker stop cc-webclient
+docker rm cc-webclient
+docker run -d -p 0.0.0.0:8080:80/tcp --name cc-webclient goledger/cc-webclient:latest
